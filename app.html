@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!-- meta -->
+    <meta charset="utf-8">
+    <title>The Seetie</title>
+
+    <!-- enable responsive viewport -->
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- styles: for a prettier demo -->
+    <link rel="stylesheet" type="text/css" href="js_files/base.css">
+    <link rel="stylesheet" type="text/css" href="js_files/elements.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery.js"></script>
+
+</head>
+
+  <body style="background:#f4f1f1" onload="$('.content').load('sources/now.html');">
+    <!-- CONTENT -->
+    <div class="content">
+           
+
+    </div>
+    <div class="bottom_bar">
+        <a href="javascript:void(0);" id="bt_1" class="bt_1 bt_1_active" onclick="bt('1');">Now</a>
+        <a href="javascript:void(0);" id="bt_2" class="bt_2" onclick="bt('2');">Do</a>
+        <a href="javascript:void(0);" id="bt_3" class="bt_3" onclick="bt('3');">Circle</a>
+        <a href="javascript:void(0);" id="bt_4" class="bt_4" onclick="bt('4');">Profile</a>
+    </div>
+
+    <!-- bouncefix-->
+    <script src="js_files/bouncefix.js"></script>
+    <script>
+      bouncefix.add('content');
+      function bt(ID) {
+          $( "#bt_1" ).removeClass( "bt_1_active" );
+          $( "#bt_2" ).removeClass( "bt_2_active" );
+          $( "#bt_3" ).removeClass( "bt_3_active" );
+          $( "#bt_4" ).removeClass( "bt_4_active" );
+
+          $( "#bt_"+ID ).addClass( "bt_"+ID+"_active" );
+
+          if(ID == '1') {
+            $('.content').load('sources/now.html');
+          } else if(ID == '2') {
+            $('.content').load('sources/do.html');
+          } else if(ID == '3') {
+            $('.content').load('sources/circle.html');
+          }
+        }
+    </script>
+
+
+</body></html>

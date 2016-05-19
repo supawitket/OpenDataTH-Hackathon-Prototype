@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)http://www.jaridmargolin.com/bouncefix.js/demo-with.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!-- meta -->
+    <meta charset="utf-8">
+    <title>The Seetie</title>
+
+    <!-- enable responsive viewport -->
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- styles: for a prettier demo -->
+    <link rel="stylesheet" type="text/css" href="js_files/base.css">
+    <link rel="stylesheet" type="text/css" href="js_files/elements.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery.js"></script>
+
+    <script>
+        function facebook_login_click() {
+            $( ".loading_white" ).fadeIn( "fast" );
+            setTimeout(redirect, 3000);
+        }
+        function redirect() {
+            window.location.href="app.html";
+        }
+    </script>
+</head>
+
+  <body>
+    <div class="fade_in">
+        <div class="facebook_login_bg">
+            <div class="logo">
+
+            </div>
+            
+        </div>
+    </div>
+    <!-- CONTENT -->
+    <div class="content">
+            <div class="login_button">
+                <div class="button">
+                    <a href="javascript:void(0);" onclick="facebook_login_click();" >Facebook Login</a>
+                </div>
+                <div class="why_we_use_facebook">
+                    <a href="#">Why we use Facebook?</a>
+                </div>
+            </div>
+            <div style="display:none;" class="loading_white"></div>
+    </div>
+
+    <!-- bouncefix-->
+    <script src="js_files/bouncefix.js"></script>
+    <script>
+      bouncefix.add('content');
+    </script>
+
+
+</body></html>
